@@ -64,7 +64,22 @@ def update():
         # TODO (main challenge): Drive in a circle
 
     # TODO (main challenge): Drive in a square when the B button is pressed
-
+x=1
+    if rc.controller.was_pressed(rc.controller.Button.B):
+        counter = 0
+        isDriving = True
+    if isDriving = True:
+        counter += rc.get_delta_time()
+    while x<=8:
+        if counter < x:
+            rc.drive.set_speed_angle(1,0)
+            x=x+1
+        elif counter < x:
+            rc.drive.set_speed_angle(1,90)
+            x=x+1
+    else:
+        rc.drive.stop()
+        isdriving = False
     # TODO (main challenge): Drive in a figure eight when the X button is pressed
 
     # TODO (main challenge): Drive in a shape of your choice when the Y button
